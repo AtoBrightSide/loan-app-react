@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const FormGroup = styled.div`
-	background-color: "#234676";
+	background: ${props => props.theme.bodyColor};
 	color: ${props => props.theme.textColor};
     display: block;
 	width: 100%;
+	padding: 5%;
 	margin: 50px auto;
+	transition: all 1s ease;
 `;
 
 export const Label = styled.label`
@@ -17,6 +19,7 @@ export const Label = styled.label`
 		color: pink;
 		transition: .5s all ease;
     }
+	transition: all 1s ease;
 `;
 
 
@@ -32,4 +35,5 @@ export const Input = styled.input`
 		color: black;
 		transition: .5s all ease;
     }
+	transition: all 1s ease;
 `;

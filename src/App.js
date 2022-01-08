@@ -2,22 +2,21 @@ import { ThemeProvider } from "styled-components"
 import Header from "./components/Header"
 import Forms from "./components/Forms"
 import { useState } from "react"
-import Results from "./components/pages/Results"
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const LightTheme = {
-  backgroundColor: "#rgba(12,34,23)",
-  navBar: "#1c1b1b",
-  textColor: "rgb(0, 0, 0)",
-  titleColor: "#fff",
-  tagLineColor: "black",
+  bodyColor: "linear-gradient(90deg, rgb(225,215,220) 0%, rgb(166, 153, 255) 100%)",
+  navBar: "linear-gradient(90deg, rgb(225,215,220) 0%, rgb(166, 153, 255) 100%)",
+  titleColor: "black",
+  textColor: "black",
   buttonColor: "#000",
+  buttonTextColor: "white",
 };
 
 const DarkTheme = {
-  bodyColor: 'rgb(28, 27, 27)',
-  navBar: "#b0d6ff",
-  titleColor: "#000",
+  bodyColor: 'linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%)',
+  navBar: "linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%)",
+  titleColor: "white",
   textColor: "white",
   buttonColor: "#fff",
   buttonTextColor: "black",
@@ -37,7 +36,6 @@ function App() {
           <Header theme={theme} setTheme={setTheme} />
           <Switch>
             <Route theme={theme} setTheme={setTheme} path='/' exact component={Forms} />
-            <Route theme={theme} setTheme={setTheme} path='/results' exact component={Results} />
           </Switch>
         </Router>
 

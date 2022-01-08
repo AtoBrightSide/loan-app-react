@@ -16,4 +16,6 @@ export const Button = styled.button`
         transform: scale(0.98);
         transition: 0.5s all ease;
     }
+    transition: 1s all ease;
+
 `
